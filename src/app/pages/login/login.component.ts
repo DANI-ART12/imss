@@ -16,14 +16,36 @@ export class LoginComponent {
   password = '';
   error = '';
 
-  onSubmit(event: Event) {
-    event.preventDefault();
-    this.login();
-  }
-  
-
+  imagenesCarrusel: string[] = [
+    'assets/imagen12.webp',
+    'assets/imagen14.webp',
+    'assets/imagen15.webp',
+    'assets/imagen16.webp'
+  ];
+indiceActual =0;
+intervalo: any;
 
   constructor(private auth: AuthService, private router: Router) {}
+  ngOnInit() {
+    this.preloadImages();
+    this.iniciarCarrusel();
+  }
+  preloadImages() {
+    this.imagenesCarrusel.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
+  }
+
+  ngOnDestroy() {
+    clearInterval(this.intervalo);
+  }
+
+  iniciarCarrusel() {
+    this.intervalo = setInterval(() => {
+      this.indiceActual = (this.indiceActual + 1) % this.imagenesCarrusel.length;
+    }, 15000); // 15 segundos
+  }
 
   login() {
     if (this.auth.login(this.matricula, this.password)) {

@@ -1,3 +1,4 @@
+import { RegistroFuncionariosComponent } from './pages/registro-funcionarios/registro-funcionarios.component';
 import { Routes } from '@angular/router';
 import { AuthGuard } from './core/auth/auth.guard';
 
@@ -70,6 +71,21 @@ export const routes: Routes = [
           path: 'graficos',
           loadComponent: () =>
             import('./pages/graficos/graficos.component').then(m => m.GraficosComponent)
+        },
+        {
+          path: 'comprobacion',
+          loadComponent: () =>
+          import ('./pages/comprobacion/comprobacion.component').then(m => m.ComprobacionComponent)
+        },
+        {
+          path: 'registro-funcionarios',
+          loadComponent: () =>
+          import ('./pages/registro-funcionarios/registro-funcionarios.component').then(m => m.RegistroFuncionariosComponent)
+        },
+        {
+          path:'viaticos-pasajes',
+          loadComponent: () =>
+          import('./pages/viaticos-pasajes/viaticos-pasajes.component').then(m => m.ViaticosPasajesComponent)
         },
         // Fin nuevas rutas
         {

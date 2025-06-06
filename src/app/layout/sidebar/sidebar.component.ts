@@ -8,7 +8,7 @@ import {
   LucideAngularModule,
   Car, Users, Route as RouteIcon, File, Settings, 
   HelpCircle, LogOut, Search, History, FileSearch, ScrollText,FileText, ChartBar,            // botones al pie
-  HospitalIcon
+  HospitalIcon, FilePen, FilePenLine, FileMinus,
 } from 'lucide-angular';
 
 const iconMap = {
@@ -25,7 +25,10 @@ const iconMap = {
   FileSearch,
   ScrollText,
   FileText,
-  HospitalIcon
+  HospitalIcon,
+  FilePen,
+  FilePenLine,
+  FileMinus
   
 };
 
@@ -40,6 +43,9 @@ const LINKS: Record<UserRole, SidebarLink[]> = {
     { label: 'Traslados Programados', icon: 'FileText', route: '/traslados' },
     { label: 'Informe Comisión', icon: 'FileSearch', route: '/informecomision' },
     { label: 'Pliego Comisión', icon: 'ScrollText', route: '/pliego-comision' },
+    {label: 'Registro de funcionarios', icon: 'FilePenLine', route:'/registro-funcionarios'},
+    {label: 'Solicitud de viaticos y pasajes', icon: 'FileMinus', route:'viaticos-pasajes'},
+    {label: 'Comprobacion del pliego de comision', icon:'FilePen', route:'comprobacion'},
     { label: 'Usuarios', icon: 'Users', route: '/usuarios' },
     { label: 'Vehículo', icon: 'Car', route: '/vehiculo' },
     { label: 'Viajes', icon: 'Route', route: '/viajes' },
@@ -47,11 +53,15 @@ const LINKS: Record<UserRole, SidebarLink[]> = {
      { label: 'Especialidades', icon: 'HospitalIcon', route: '/especialidades' },
     { label: 'Historial', icon: 'History', route: '/historial' },
     { label: 'Configuración', icon: 'Settings', route: '/configuracion' }
+    
   ],
   SUBADMIN: [
     { label: 'Traslados Programados', icon: 'FileText', route: '/traslados' },
     { label: 'Informe Comisión', icon: 'FileSearch', route: '/informecomision' },
     { label: 'Pliego Comisión', icon: 'ScrollText', route: '/pliego-comision' },
+    {label: 'Registro de funcionarios', icon: 'FilePenLine', route:'/registro-funcionarios'},
+    {label: 'Solicitud de viaticos y pasajes', icon: 'FileMinus', route:'viaticos-pasajes'},
+    {label: 'Comprobacion del pliego de comision', icon:'FilePen', route:'comprobacion'},
     { label: 'Viajes', icon: 'Route', route: '/viajes' },
     { label: 'Historial', icon: 'History', route: '/historial' }
   ],
@@ -60,6 +70,9 @@ const LINKS: Record<UserRole, SidebarLink[]> = {
     { label: 'Solicitud traslados', icon: 'FileText', route: '/formatos' },
     { label: 'Informe Comisión', icon: 'FileSearch', route: '/informecomision' },
     { label: 'Pliego Comisión', icon: 'ScrollText', route: '/pliego-comision' },
+    {label: 'Registro de funcionarios', icon: 'FilePenLine', route:'/registro-funcionarios'},
+    {label: 'Solicitud de viaticos y pasajes', icon: 'FileMinus', route:'viaticos-pasajes'},
+    {label: 'Comprobacion del pliego de comision', icon:'FilePen', route:'comprobacion'},
     { label: 'Historial', icon: 'History', route: '/historial' }
   ],
   

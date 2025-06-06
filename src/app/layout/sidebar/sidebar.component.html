@@ -21,19 +21,6 @@
       </div>
     </div>
 
-    <!-- Buscador ----------------------------------------------------------->
-    <div class="mt-4 px-1">
-      <label class="sr-only" for="sidebar-search">Search</label>
-      <div class="flex items-center h-10 rounded-md bg-gray-100 px-3 gap-3
-                  focus-within:bg-white shadow-sm transition">
-        <lucide-icon [img]="icons.Search" class="w-4 h-4 text-gray-500"></lucide-icon>
-        <input id="sidebar-search"
-               type="text"
-               placeholder="Search..."
-               class="w-full bg-transparent text-sm outline-none placeholder:text-gray-500">
-      </div>
-    </div>
-
     <!-- Navegación --------------------------------------------------------->
     <nav class="overflow-y-auto mt-6 -mr-6 pr-6 flex-1">
       <ul class="flex flex-col gap-0.5">
@@ -51,12 +38,12 @@
 
     <!-- Botones finales ---------------------------------------------------->
     <div class="flex flex-col gap-2 mt-auto">
-      <button type="button"
+     <!-- <button type="button"
               class="flex items-center gap-2 h-10 w-full px-4 rounded-md text-sm
                      text-gray-500 hover:bg-gray-200 hover:text-black transition">
         <lucide-icon [img]="icons.HelpCircle" class="w-5 h-5"></lucide-icon>
         Help &amp; Information
-      </button>
+      </button>-->
 
       <button type="button"
       (click)="logout()"
